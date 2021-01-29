@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html>
+<system.webServer>
+    <handlers>
+        <remove name="ExtensionlessUrlHandler-Integrated-4.0" />
+        <remove name="OPTIONSVerbHandler" />
+        <remove name="TRACEVerbHandler" />
+        <add name="ExtensionlessUrlHandler-Integrated-4.0" path="*." verb="*"
+            type="System.Web.Handlers.TransferRequestHandler" preCondition="integratedMode,runtimeVersionv4.0" />
+    </handlers>
+</system.webServer>
 
 <head>
     <meta charset="utf-8">
@@ -7,25 +16,35 @@
     <title>Imperial Hotels and Resorts - Website</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/bulma-spacing">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
+<style>
+    .hero {
+        background: black url(https://cdn.iharrblx.xyz/RobloxPlayerBeta_N9sFDKjBGK.png) center / cover;
+
+
+
+    }
+</style>
 
 <body>
-    <div class="navbar-menu">
+    <div class="navbar-menu is-active">
         <div class="navbar-brand">
             <a class="navbar-item" href="https://imperial-hotels-and-resorts-github.github.io/site-2021/">
-              <img src="https://i.imgur.com/N5uWOiQ.png" alt="ihar" width="28" height="28">
+                <img src="https://i.imgur.com/N5uWOiQ.png" alt="ihar" width="28" height="28">
             </a>
-            <div class="navbar-burger" data-target="navbarExampleTransparentExample">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>        
+
+        </div>
         <div class="navbar-start">
-            <a class="navbar-item" href="https://imperial-hotels-and-resorts-github.github.io/site-2021/jobs.html">
+            <a class="navbar-item" href="https://links.iharrblx.xyz/apply">
                 Jobs
             </a>
-      <a class="navbar-item" href="https://forum.iharrblx.xyz/t/announements">                Announcements
+            <a class="navbar-item" href="https://forum.iharrblx.xyz/t/announements"> Announcements
+            </a>
+            <a class="navbar-item" href="https://links.iharrblx.xyz/discord"> Discord
             </a>
         </div>
 
@@ -34,7 +53,12 @@
         <div class="hero-body">
             <p class="title">Imperial Hotels and Resorts</p>
             <p class="subtitle"> We're an amazing hotel group on roblox, we want you!</p>
-            <button class="button" onclick="window.location.href='https://imperial-hotels-and-resorts-github.github.io/site-2021/jobs.html'"> Jobs </button>
+            <button class="button"
+                onclick="window.location.href='https://imperial-hotels-and-resorts-github.github.io/site-2021/jobs.html'">
+                Jobs </button>
+                <button class="button is-danger"
+                onclick="window.location.href='https://links.iharrblx.xyz/game'">
+                Play our game </button>
         </div>
 
     </section>
@@ -66,7 +90,82 @@
             </div>
         </nav>
     </section>
+    <section class="section">
+        <p class="title">The hotel</p>
+        <p class="subtitle">HOLY CRAP, AMAZING!</p>
+        <hr>
+        <div class="container">
+            <!-- Start Carousel -->
+            <div id="carousel-demo" class="carousel" >
+                <div class="item-1">
+                    <img src="https://i.imgur.com/Ma8b63H.png" alt="ihar" >
+                </div>
+                <div class="item-2">
+                    <img src="https://i.imgur.com/3r1AkfZ.png" alt="ihar" >
+
+                </div>
+                <div class="item-3">
+                    <img src="https://i.imgur.com/V3t5wVB.png" alt="ihar" >
+
+                </div>
+                <div class="item-4">
+                    <img src="https://i.imgur.com/pHJxyCp.jpg" alt="ihar" >
+
+                </div>
+                
+        </div>
+
+        </div>
+
+
+    </section>
+    <section class="section">
+        <p class="title">Goals</p>
+        <p class="subtitle">Yup, even we have goals!</p>
+        <hr>
+        <p class="subtitle"> Members, goal 1000</p>
+        <progress class="progress is-info" value="80" max="100">80%</progress>
+        <p class="subtitle"> Discord members, goal 500</p>
+        <progress class="progress is-info" value="70" max="100">70%</progress>
+        
+    </section> 
+    <section class="section">
+        <div class="container">
+            <!-- Start Carousel -->
+
+    </section>
+    <div class="footer"> 
+        <p class="content has-text-centered">  © Imperial Hotels and Resorts | 2021
+            </p>
+        <div class="content has-text-centered"> 
+            <a class="mx-0" href="https://links.iharrblx.xyz/apply"> Jobs</a>
+            
+            
+        </div>
+        <div class="content has-text-centered">
+            <a href="https://links.iharrblx.xyz/discord"><i class="fab fa-discord icon" aria-hidden="true"></i></a>
+            <a href="https://links.iharrblx.xyz/game"><i class="fas fa-gamepad" aria-hidden="true"></i></a>     
+            <a href="https://links.iharrblx.xyz/apply"><i class="fas fa-clipboard-list" aria-hidden="true"></i></a>     
+
+     
+                 
+            
+             
+            
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+    <script>
+        bulmaCarousel.attach('#carousel-demo', {
+            slidesToScroll: 1,
+            slidesToShow: 1
+        });
+    </script>
 
 </body>
+<script>
+</script>
 
 </html>
