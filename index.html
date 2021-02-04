@@ -7,25 +7,47 @@
     <title>Imperial Hotels and Resorts - Website</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/bulma-spacing">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Imperial Hotels and Resorts | Site" />
+    <meta property="og:description" content="This is imperials site!" />
+    <meta property="og:url" content="iharrblx.xyz" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="https://i.imgur.com/N5uWOiQ.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://i.imgur.com/N5uWOiQ.png">
+
 </head>
+<style>
+    .hero {
+        background: black url(https://cdn.iharrblx.xyz/RobloxPlayerBeta_N9sFDKjBGK.png) center / cover;
+
+
+
+    }
+</style>
 
 <body>
-    <div class="navbar-menu">
+    <div class="navbar-menu is-active">
         <div class="navbar-brand">
             <a class="navbar-item" href="https://iharrblx.xyz">
-              <img src="" alt="ihar" width="112" height="28">
+                <img src="https://i.imgur.com/N5uWOiQ.png" alt="ihar" width="28" height="28">
             </a>
-            <div class="navbar-burger" data-target="navbarExampleTransparentExample">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>        
+
+        </div>
         <div class="navbar-start">
-            <a class="navbar-item">
+            <a class="navbar-item" href="https://links.iharrblx.xyz/apply">
                 Jobs
             </a>
-      <a class="navbar-item" href="https://forum.iharrblx.xyz/t/announements">                Announcements
+            <a class="navbar-item" href="https://forum.iharrblx.xyz/t/announements"> Announcements
+            </a>
+            <a class="navbar-item" href="https://links.iharrblx.xyz/discord"> Discord
+            </a>
+            <a class="navbar-item" href="https://forum.iharrblx.xyz"> Forum
+            </a>
+            <a class="navbar-item" href="https://iharrblx.xyz/links.html"> Links
             </a>
         </div>
 
@@ -34,6 +56,13 @@
         <div class="hero-body">
             <p class="title">Imperial Hotels and Resorts</p>
             <p class="subtitle"> We're an amazing hotel group on roblox, we want you!</p>
+            <button class="button"
+                onclick="window.location.href='https://links.iharrblx.xyz/apply'">
+                Jobs </button>
+            <button class="button is-danger" onclick="window.location.href='https://links.iharrblx.xyz/game'">
+                Play our game </button>
+                <button class="button is-link" onclick="window.location.href='https://iharrblx.xyz/links.html'">
+                    Links </button>
         </div>
 
     </section>
@@ -45,27 +74,135 @@
             <div class="level-item has-text-centered">
                 <div>
                     <p class="heading">Members</p>
-                    <p class="title">780+</p>
+                    <p class="title" id="mcounter">840</p>
                 </div>
             </div>
             <div class="level-item has-text-centered">
 
                 <div>
                     <p class="heading">Play sessions</p>
-                    <p class="title">6,500+</p>
+                    <p class="title" id="psessions">6,794</p>
                 </div>
             </div>
             <div class="level-item has-text-centered">
 
                 <div>
                     <p class="heading">Discord</p>
-                    <p class="title">350++</p>
+                    <p class="title">350+</p>
                 </div>
 
             </div>
         </nav>
     </section>
+    <section class="section">
+        <p class="title">The hotel</p>
+        <p class="subtitle">HOLY CRAP, AMAZING!</p>
+        <hr>
+        <div class="container">
+            <!-- Start Carousel -->
+            <div id="carousel-demo" class="carousel">
+                <div class="item-1">
+                    <img src="https://i.imgur.com/Ma8b63H.png" alt="ihar">
+                </div>
+                <div class="item-2">
+                    <img src="https://i.imgur.com/3r1AkfZ.png" alt="ihar">
+
+                </div>
+                <div class="item-3">
+                    <img src="https://i.imgur.com/V3t5wVB.png" alt="ihar">
+
+                </div>
+                <div class="item-4">
+                    <img src="https://i.imgur.com/pHJxyCp.jpg" alt="ihar">
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+    <section class="section">
+        <p class="title">Goals</p>
+        <p class="subtitle">Yup, even we have goals!</p>
+        <hr>
+        <p class="subtitle"> Members, goal 1000</p>
+        <progress class="progress is-info" id="myclass" value="84" max="100">30%</progress>
+        <p class="subtitle"> Discord members, goal 500</p>
+        <progress class="progress is-info" value="70" max="100">70%</progress>
+
+    </section>
+    <section class="section">
+        <div class="container">
+            <!-- Start Carousel -->
+
+    </section>
+    <div class="footer">
+        <p class="content has-text-centered"> © Imperial Hotels and Resorts | 2021
+        </p>
+        <div class="content has-text-centered">
+            <a class="mx-0" href="https://links.iharrblx.xyz/apply"> Jobs</a>
+            <a class="mx-0 ml-3" href="https://iharrblx.xyz/links.html.html"> Links</a>
+
+
+
+        </div>
+        <div class="content has-text-centered">
+            <a href="https://links.iharrblx.xyz/discord"><i class="fab fa-discord icon" aria-hidden="true"></i></a>
+            <a href="https://links.iharrblx.xyz/game"><i class="fas fa-gamepad" aria-hidden="true"></i></a>
+            <a href="https://links.iharrblx.xyz/apply"><i class="fas fa-clipboard-list" aria-hidden="true"></i></a>
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+    <script>
+        bulmaCarousel.attach('#carousel-demo', {
+            slidesToScroll: 1,
+            slidesToShow: 1
+        });
+    </script>
 
 </body>
+<script>
+     async function getcount() {
+        const response = await axios
+            .get(`https://cors-anywhere.herokuapp.com/https://rbloxapi.dogwantswants.repl.co/api/roblox/groupcount/5304522`, {
+                headers: {"Access-Control-Allow-Origin": "*"}
+            })
+            .catch(err => {
+                console.log("First error: " + err);
+            });
+        let response_count = response.data.message;
+        console.log((response_count / 1000) * 100)
+        document.getElementById("myclass").value = (response_count / 1000) * 100;
+
+        console.log(response_count)
+        document.getElementById("mcounter").innerHTML = response_count;
+        const re2sponse = await axios
+            .get(`https://cors-anywhere.herokuapp.com/https://rbloxapi.dogwantswants.repl.co/api/roblox/visits/1427980191`, {
+                headers: {"Access-Control-Allow-Origin": "*"}
+            })
+            .catch(err => {
+                console.log("First error: " + err);
+            });
+            let responsase_count = re2sponse.data.message;
+
+        console.log(responsase_count.toLocaleString())
+        document.getElementById("psessions").innerHTML = responsase_count.toLocaleString();
+
+
+        return response_count;
+    }
+    getcount();
+</script>
 
 </html>
+
