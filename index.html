@@ -47,6 +47,8 @@
             </a>
             <a class="navbar-item" href="https://forum.iharrblx.xyz"> Forum
             </a>
+            <a class="navbar-item" href="https://iharrblx.xyz/links.html"> Links
+            </a>
         </div>
 
     </div>
@@ -59,6 +61,8 @@
                 Jobs </button>
             <button class="button is-danger" onclick="window.location.href='https://links.iharrblx.xyz/game'">
                 Play our game </button>
+                <button class="button is-link" onclick="window.location.href='https://iharrblx.xyz/links.html'">
+                    Links </button>
         </div>
 
     </section>
@@ -70,14 +74,14 @@
             <div class="level-item has-text-centered">
                 <div>
                     <p class="heading">Members</p>
-                    <p class="title">780+</p>
+                    <p class="title" id="mcounter">840</p>
                 </div>
             </div>
             <div class="level-item has-text-centered">
 
                 <div>
                     <p class="heading">Play sessions</p>
-                    <p class="title">6,500+</p>
+                    <p class="title" id="psessions">6,794</p>
                 </div>
             </div>
             <div class="level-item has-text-centered">
@@ -124,7 +128,7 @@
         <p class="subtitle">Yup, even we have goals!</p>
         <hr>
         <p class="subtitle"> Members, goal 1000</p>
-        <progress class="progress is-info" value="80" max="100">80%</progress>
+        <progress class="progress is-info" id="myclass" value="84" max="100">30%</progress>
         <p class="subtitle"> Discord members, goal 500</p>
         <progress class="progress is-info" value="70" max="100">70%</progress>
 
@@ -139,6 +143,8 @@
         </p>
         <div class="content has-text-centered">
             <a class="mx-0" href="https://links.iharrblx.xyz/apply"> Jobs</a>
+            <a class="mx-0 ml-3" href="https://iharrblx.xyz/links.html.html"> Links</a>
+
 
 
         </div>
@@ -166,6 +172,36 @@
 
 </body>
 <script>
+     async function getcount() {
+        const response = await axios
+            .get(`https://cors-anywhere.herokuapp.com/https://rbloxapi.dogwantswants.repl.co/api/roblox/groupcount/5304522`, {
+                headers: {"Access-Control-Allow-Origin": "*"}
+            })
+            .catch(err => {
+                console.log("First error: " + err);
+            });
+        let response_count = response.data.message;
+        console.log((response_count / 1000) * 100)
+        document.getElementById("myclass").value = (response_count / 1000) * 100;
+
+        console.log(response_count)
+        document.getElementById("mcounter").innerHTML = response_count;
+        const re2sponse = await axios
+            .get(`https://cors-anywhere.herokuapp.com/https://rbloxapi.dogwantswants.repl.co/api/roblox/visits/1427980191`, {
+                headers: {"Access-Control-Allow-Origin": "*"}
+            })
+            .catch(err => {
+                console.log("First error: " + err);
+            });
+            let responsase_count = re2sponse.data.message;
+
+        console.log(responsase_count.toLocaleString())
+        document.getElementById("psessions").innerHTML = responsase_count.toLocaleString();
+
+
+        return response_count;
+    }
+    getcount();
 </script>
 
 </html>
